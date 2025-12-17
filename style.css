@@ -1,65 +1,92 @@
-    body {
+body {
     font-family: Calibri, Arial, sans-serif;
     line-height: 1.6;
 }
-table {
-    border-collapse: collapse;
-    width: 100%;
-    margin: 20px 0;
-}
-table, th, td {
-    border: 1px solid black;
-}
-th, td {
-    padding: 8px;
-    text-align: left;
-}
-/* *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} */
+
 .container{
     width: 100%;
     height: 100vh;
-    /* background: #e3f9ff; */
-    /* background: rgb(208, 208, 230); */
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+/* Calculator Body*/
+
 .calculator{
-    background: #3a4452;
+    background: #2b2430;   /* UNIQUE DARK COLOR */
     padding: 20px;
     border-radius: 10px;
 }
+
+/* Calculator Buttons*/
+
 .calculator form input{
     border: 0;
     outline: 0;
     width: 60px;
     height: 60px;
     border-radius: 10px;
-    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1),5px 5px 15px rgba(0, 0, 0, 0.2);
-    background: transparent;
+    box-shadow: -6px -6px 12px rgba(255, 255, 255, 0.04),
+                6px 6px 12px rgba(0, 0, 0, 0.4);
+    background: #3a3144;
     font-size: 20px;
-    color: #fff;
+    color: #f1f1f1;
     cursor: pointer;
     margin: 10px;
+    transition: all 0.2s ease;
 }
+
+/* Hover effect */
+.calculator form input:hover{
+    background: #c47a3f;
+    color: #fff;
+}
+
+/* Display Screen*/
 
 form .display {
     display: flex;
     justify-content: flex-end;
     margin: 20px 0;
 }
+
 form .display input{
     text-align: right;
     flex: 1;
     font-size: 45px;
     box-shadow: none;
+    background: #19141f;
+    color: #e6e1ff;
+    border-radius: 10px;
+    padding: 10px;
 }
+
+/* Equal Button*/
+
 form input.equal{
     width: 145px;
+    background: #7a2e3a;
 }
- .tab input,.tab select, .tab button { margin: 5px; padding: 5px; font-size: 16px; }
-  #tableContainer  td, #tableContainer th { border: 1px solid #333; padding: 10px; text-align: center; }
+
+form input.equal:hover{
+    background: #9c3b4b;
+}
+
+
+/*Table Styling (Unchanged) */
+
+.tab input,
+.tab select,
+.tab button {
+    margin: 5px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+#tableContainer td,
+#tableContainer th {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: center;
+}
